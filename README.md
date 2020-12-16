@@ -56,6 +56,19 @@ see [config/config.default.js](config/config.default.js) for more detail.
 ## Example
 
 <!-- example here -->
+// {app_root}/app/service/my_service.js
+'use strict';
+const Service = require('egg').Service;
+
+class MyService extends Service {
+  async sqlite() {
+      const result = await this.app.sqlite3.all('select * from test where id=:id', [1]);
+      console.log(result);
+      console.log(result[0].name);
+      
+  }
+};
+module.exports = MyService;
 
 ## Questions & Suggestions
 
