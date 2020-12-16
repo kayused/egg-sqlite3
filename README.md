@@ -56,6 +56,7 @@ see [config/config.default.js](config/config.default.js) for more detail.
 ## Example
 
 <!-- example here -->
+```js
 // {app_root}/app/service/my_service.js
 'use strict';
 const Service = require('egg').Service;
@@ -69,6 +70,7 @@ class MyService extends Service {
   }
 };
 module.exports = MyService;
+```
 
 ## Questions & Suggestions
 
